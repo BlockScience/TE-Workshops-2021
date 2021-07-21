@@ -14,7 +14,7 @@ kappas = []
 invariant_l = []
 
 initial_conditions_l = []
-for kappa in [2, 3]:
+for kappa in [2, 2.1]:
     V0 = invariant(R0,S0,kappa) 
     P0 = spot_price(R0, V0, kappa)
 
