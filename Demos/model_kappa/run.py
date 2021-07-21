@@ -12,8 +12,10 @@ def run():
     '''
     exec_mode = ExecutionMode()
     multi_mode_ctx = ExecutionContext(context=exec_mode.multi_proc)
-    for x,y in zip(configs, genesis_states):
-        x.initial_state = y
+    for x in configs[:50]:
+        x.initial_state = genesis_states[0]
+    for x in configs[50:]:
+        x.initial_state = genesis_states[1]
     simulation = Executor(exec_context=multi_mode_ctx, configs=configs)
     
     raw_system_events, tensor_field, sessions = simulation.execute()

@@ -9,7 +9,7 @@ from .parts.utils import *
 
 sim_config = config_sim(
     {
-        'N': 1, # number of monte carlo runs
+        'N': 50, # number of monte carlo runs
         'T': range(4000), # number of timesteps
         'M': sys_params, # system parameters
     }
